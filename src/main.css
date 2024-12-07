@@ -1,0 +1,43 @@
+html,
+body,
+#app {
+  --uno: h100% m0 p0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide-enter-active {
+  --uno: animate-slide-in-up animate-duration-175ms transition-ease-in-out;
+}
+
+.slide-leave-active {
+  --uno: animate-slide-in-up animate-duration-175ms animate-reverse transition-ease-in-out;
+}
+
+.appear-enter-active,
+.appear-leave-active {
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+.appear-enter-from,
+.appear-leave-to {
+  height: 0;
+  opacity: 0;
+}
+
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.list-leave-active {
+  position: absolute;
+}
